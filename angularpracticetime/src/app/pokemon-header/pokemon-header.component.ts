@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Results } from 'src/interfaces'
+
 
 @Component({
   selector: 'app-pokemon-header',
@@ -13,7 +15,7 @@ export class PokemonHeaderComponent implements OnInit {
 
   abilities: Array<string>;
   types: Array<string>;
-  pokemonList = Array<Results>;
+  pokemonList:  Array<Results>;
   search: string;
   currentType: string;
   currentAbilities: Array<string>;
@@ -35,6 +37,18 @@ export class PokemonHeaderComponent implements OnInit {
   ngOnInit(): void {
     this.abilities = [];
     this.types= [];
+  }
+
+  searchEvent(search){
+
+  }
+
+  onTypeSelected(){
+
+  }
+
+  onAbilitySelected(){
+
   }
 
   setPokemonAbilities(pokemon: Results): void{
